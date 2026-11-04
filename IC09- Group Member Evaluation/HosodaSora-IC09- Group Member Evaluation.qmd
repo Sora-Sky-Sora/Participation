@@ -1,0 +1,55 @@
+---
+title: "Group Member Evaluation Form"
+format:
+  html:
+    toc: false
+    number-sections: false
+    html-math-method: plain
+css: styles.css
+---
+
+**Name:** Sora Hosoda  
+**Date:** November 3, 2026  
+**Group Name/Project Name:** Team 7 — Avenue Shabu
+
+## Evaluation Period
+
+Week 01 through Proposal Presentation Day
+
+Each member, including myself, is evaluated at 100% because everyone completed their assigned work and contributed to the group project. Frank Renn is identified as the MVP because he provided especially strong coordination and support throughout the project.
+
+## Member Evaluation
+
+| Member | Grade (%) | MVP |
+|---|---:|:---:|
+| Sora Hosoda (self) | 100% | No |
+| Frank Renn | 100% | Yes |
+| Yujin Jeong (Jenny) | 100% | No |
+| Qian Zhu (Sandy) | 100% | No |
+| Grace Sen | 100% | No |
+
+## Comments on Contributions
+
+### Sora Hosoda
+
+I completed my assigned work for AO4. I developed the review-analysis framework, organized the review-data template, prepared the review collection plan, and contributed AO4 content to the written report and presentation. I also helped prepare the review counts, competitor comparison, and guest quotes.
+
+### Frank Renn
+
+Frank completed his assigned work on CRM, customer segments, repeat visits, and the company’s digital marketing practices. He also helped coordinate the team, organize project materials, and keep the group on schedule. His coordination and support went beyond the regular requirements, so I selected him as the MVP.
+
+### Yujin Jeong Jenny
+
+Jenny completed her assigned work on paid advertising, attribution, analytics, GA4, GTM, and Toast data. She developed the AO2 framework and contributed related research, data requirements, and presentation content.
+
+### Qian Zhu Sandy
+
+Sandy completed her assigned work on Instagram content, influencer marketing, engagement, and restaurant-visit analysis. She contributed the AO3 framework, related data requirements, and presentation content.
+
+### Grace Sen
+
+Grace completed her assigned work on promotions, pricing, SEO, competitors, and promotion profitability. She developed the AO5 framework, identified the required sales and cost data, and contributed to the written report and team deliverables.
+
+## Overall Evaluation
+
+All members contributed to the project and completed their assigned responsibilities during the evaluation period. I therefore assigned 100% to each member. Frank Renn is the MVP because his coordination and project support made an especially strong contribution to the team’s progress.

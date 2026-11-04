@@ -1,0 +1,208 @@
+---
+title: "Class Notes for Weeks 10"
+date: today
+Author: Sora Hosoda
+format:
+  html:
+    toc: true
+    toc-depth: 1
+    toc-expand: true
+    highlight-style: espresso
+    number-sections: true
+---
+
+# Introduction
+
+Today's class covered market research careers, new technology in market research, course updates, BigQuery, and data preparation using R. The guest speaker explained how technology is changing the market research industry. The professor also explained the changes to the assignments and the process of preparing data for analysis.
+
+# Market Research Industry and Career Opportunities
+
+## Starting a Career in Market Research
+
+Many people start their careers at large market research companies. They can learn important skills such as:
+
+- Project management
+- Survey research
+- Data collection
+- Data analysis
+- Report writing
+- Working with clients
+
+After gaining several years of experience, some researchers start their own agencies. Some people create a company because they have a better way to collect data or use new technology. A small research company can still be successful. Some researchers work with several clients and have only a few employees. A small company can be flexible and allow researchers to work on projects that they are interested in. Market research is a skill that can continue to change with technology. If researchers understand data and know how to use their skills, they can continue to find work. They may also create their own job or company.
+
+## Importance of Networking
+
+The guest speaker recommended joining the Insights Association. It can help us:
+
+- Meet people in the industry
+- Learn about the market research field
+- Find internships
+- Find mentors
+- Learn about job opportunities
+
+we should also look for internships and small research projects. Practicing surveys and data analysis can help build experience for a resume. Networking is also important. We should continue meeting people, asking questions, and looking for opportunities.
+
+# Technology in Market Research
+
+## Changes in Data Collection
+
+In the past, market research often used:
+
+- Mail surveys
+- Telephone surveys
+- Online interviews
+- Telephone sampling
+
+Telephone surveys were expensive and it was difficult to reach people. It was also difficult to find people who wanted to answer survey questions. Researchers started using mixed-mode sampling. This can include:
+
+- Telephone interviews
+- Online research
+- Mobile panels
+- Internet surveys
+
+Using different methods helps researchers find more participants.
+
+## Changes in the Research Process
+
+Several years ago, a research project could take two or three weeks. The process included:
+
+1. Writing the survey
+2. Programming the survey
+3. Finding a sample provider
+4. Collecting the data
+5. Preparing the data
+6. Conducting data analysis
+7. Creating the report
+
+Today, many tools can make this process much faster. A researcher may write a survey in a document and move it into a survey platform automatically. A project can sometimes be programmed and launched on the same day. Data analysis and report writing can also be supported by new tools. However, researchers are still needed. Researchers need to:
+
+- Choose the correct sample
+- Write good survey questions
+- Check the data
+- Understand the results
+- Decide whether the results make sense
+
+Technology can help with the process, but it does not completely replace researchers.
+
+# Synthetic Data
+
+Synthetic data is one of the new topics in market research. It can be used with large datasets to answer questions quickly. For example, a company can create a system using its own data. Employees can ask questions and receive quick information for business decisions. However, synthetic data has important limitations. It may not work well for questions about:
+
+- Price points
+- Brand recognition
+- Past buying behavior
+- Household information
+- Number of children
+- Personal memories
+- Opinions that need real participants
+
+Synthetic data is not able to answer every type of survey question. It can work for some simple and quick research, but it cannot replace all human data.
+
+Synthetic data may be useful when:
+
+- The target population is difficult to reach
+- Only a small amount of information is needed
+- A company has a large amount of existing data
+- A company needs a quick answer
+
+Real people are still important for most large-scale market research projects. Data collection companies may also create new products by collecting large amounts of data for training and analysis. Synthetic data is more likely to be an opportunity than a complete threat to data collection companies. These companies can change their services and provide new types of data products.
+
+# AI-Moderated Interviews
+
+Qualitative research usually includes conversations between a researcher and a participant. For example, a moderator may ask a participant about their college experience or the tools they use. Recruiting participants and conducting interviews can take a lot of time. Recently, some companies have started using AI-moderated interviews.
+
+In an AI-moderated interview, an AI system can:
+
+- Recruit participants
+- Ask questions
+- Continue a conversation
+- Collect responses
+- Complete a short interview
+
+This method is becoming more common. However, researchers still need to understand qualitative research and check the quality of the answers.
+
+# Survey Participation and Incentives
+
+It can be difficult to get people to participate in surveys. Simply asking people to take a survey may result in a low response rate.
+
+Researchers should:
+
+- Identify the correct target audience
+- Use creative ways to start a conversation
+- Explain the purpose of the survey clearly
+- Recruit participants in places where the target audience can be found
+
+Incentives may increase participation, but they can also cause problems. Some participants may only be interested in receiving the incentive or may provide low-quality answers. Incentives can also be expensive and may affect participants' answers.
+
+# Course and Assignment Updates
+
+Some CEP and group assignments will not be graded separately. These assignments were used as steps to prepare the final project. The main focus will be:
+
+- The final presentation
+- The final written report
+- Chapter 3
+- Data collection and verification
+- The analysis method
+
+We should continue working on their projects, but some assignments will be used only as guidelines.
+
+# Data Preparation and Data Wrangling
+
+Data preparation is needed before data analysis. The main steps are:
+
+1. Import the data
+2. Check the variables
+3. Find missing values
+4. Check the data quality
+5. Prepare the data for analysis
+
+we can start preparing partial data before all data collection is finished. Data preparation can help improve Chapter 3 because it helps explain the sample and the analysis method.
+
+# Reading and Checking SPSS Data in R
+
+The class used R to import SPSS data. After importing the data, researchers should check:
+
+- The number of rows and columns
+- Variable names
+- Missing values
+- Variable labels
+- Value labels
+
+Missing values should be counted for each variable. Variables with missing values should be reviewed before analysis.
+
+# Data Dictionary and Labels
+
+A data dictionary helps researchers understand the dataset. It can include:
+
+- Variable names
+- Variable labels
+- Value labels
+- Measurement scales
+- Missing values
+
+Variable labels explain what a variable means. Value labels explain the meaning of each number, such as 1 = strongly disagree and 5 = strongly agree.
+
+Researchers should use the original questionnaire or coding instructions when labels are missing.
+
+# BigQuery and SQL
+
+BigQuery can be used to store and analyze large datasets, including GA4 data. SQL is used to query the data.
+
+Some basic SQL functions are:
+
+- SELECT
+- FROM
+- LIMIT
+- ORDER BY
+- COUNT
+- GROUP BY
+
+# Analytics Objectives and Analysis Methods
+
+The analysis plan should explain:
+
+1. Which method will be used
+2. Why the method is appropriate
+3. Which hypothesis or analytics objective it will address
+
+Each hypothesis should be connected to the correct variables and analysis method.
