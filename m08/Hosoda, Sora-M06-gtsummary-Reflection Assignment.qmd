@@ -1,0 +1,173 @@
+---
+title: "Summary Tables with gtsummary"
+subtitle: "M08 Reflection and CEP Review Analysis"
+author: "Sora Hosoda"
+institute: "IBM 6500, Cal Poly Pomona"
+date: "`r Sys.Date()`"
+format:
+  revealjs:
+    theme: serif
+    width: 1600
+    height: 900
+    footer: "M08 Reflection — Sora Hosoda"
+    transition: slide
+    transition-speed: default
+    incremental: false
+    toc: true
+    toc-depth: 1
+    slide-number: true
+    scrollable: true
+    smaller: true
+    code-fold: false
+    code-overflow: wrap
+    number-sections: false
+    number-depth: 5
+    embed-resources: true
+editor: visual
+execute:
+  echo: true
+  freeze: auto
+---
+
+```{r}
+#| label: setup
+#| include: false
+library(dplyr)
+library(readr)
+library(stringr)
+library(gtsummary)
+```
+
+## Reflection on gtsummary
+
+### 1. gtsummary’s Capabilities and Benefits
+
+**Prompt:** In Step 1, you saw how to create a summary table and modify it for different statistical analyses. Summarize the package’s capabilities as explained by the speaker. How may `{gtsummary}` benefit you in your schoolwork or career?
+
+The `{gtsummary}` package creates clear tables from data and statistical models. It can summarize basic information, compare groups, show cross-tabulations, and present regression results. It also adds useful details, such as sample sizes, percentages, confidence intervals, and p-values, without requiring me to format every result by hand. The tables can still be changed with labels and formatting options.
+
+I can use this package in my school projects to present results in a consistent way. It also helps make my analysis easier to check because the table is created from the code and data. In a future marketing role, I could use it to share survey, customer, or campaign results with people who need to understand the main findings quickly (Course lecture, n.d.; Sjoberg, 2021).
+
+::: {.notes}
+The main point I took from the lecture is that gtsummary can create tables for both data summaries and model results. I would not need to build every table from the beginning.
+:::
+
+### 2.1. Difference Between gtsummary, gt, and gtExtras
+
+**Prompt:** How does `{gtsummary}` differ from `{gt}` and `{gtExtras}`?
+
+The three packages are related, but they focus on different parts of table work. The `{gt}` package is used to build and format display tables. `{gtExtras}` adds extra visual features to tables made with `gt`. `{gtsummary}` starts with data or a statistical model and creates a summary or results table with useful statistical details. It can then use `gt` to display the finished table. I would choose `gtsummary` when I need a statistical table, and use `gt` or `gtExtras` when I need more control over how a table looks (gt, n.d.; gtExtras, 2026; Sjoberg, 2021).
+
+### 2.2. Three New Things I Learned
+
+**Prompt:** Give three things you learned from the extended presentation that were not explained in the Step 1 lecture.
+
+1. **Themes can set a consistent style.** I learned that a theme can set default table options, such as a journal style or a more compact layout. This can help keep several tables consistent.
+2. **Different tables can be combined.** The presentation showed that summary tables and model tables can be stacked or placed side by side. This can make a report shorter and easier to compare.
+3. **Results can be used in the report text.** Values from a gtsummary table can be inserted into written results. This can reduce copying numbers by hand and help keep the text connected to the analysis (Sjoberg, 2021).
+
+::: {.notes}
+These were new to me because I had mainly thought of gtsummary as a way to make one formatted table. The extended presentation showed that it can also help organize and report several results.
+:::
+
+## Applying gtsummary to My CEP Data
+
+### 3. Cross-tabulation
+
+**Prompt:** Apply what you learned to your MSDM CEP data. Choose two appropriate variables for cross-tabulation and show whether the two variables are associated. Use appropriate statistics to test the association. Include the code, table, and interpretation.
+
+For this analysis, I used Yelp reviews collected for Avenue Shabu and five nearby competitors. The file contains `r nrow(read_csv("Google and YelpReview Data  - Review Data (1).csv", skip = 2, show_col_types = FALSE))` reviews from November 6, 2025, through November 5, 2026. I grouped the reviews as Avenue Shabu or competitor and compared the full one-to-five-star rating distribution. A chi-square test was used to check whether the rating distribution was associated with the business group.
+
+This is a simple first analysis of the review data. It does not identify why a customer gave a rating, and it does not show that the business group caused the rating.
+
+```{r}
+#| label: data-preparation
+reviews <- read_csv(
+  "Google and YelpReview Data  - Review Data (1).csv",
+  skip = 2,
+  show_col_types = FALSE
+) %>%
+  mutate(
+    review_date = as.Date(review_date),
+    star_rating = as.integer(star_rating),
+    business_role = factor(
+      business_role,
+      levels = c("Avenue Shabu", "Competitor")
+    )
+  )
+
+reviews %>%
+  summarise(
+    number_of_reviews = n(),
+    missing_ratings = sum(is.na(star_rating)),
+    missing_review_text = sum(is.na(review_text) | str_trim(review_text) == ""),
+    duplicate_review_ids = sum(duplicated(review_id))
+  )
+```
+
+```{r}
+#| label: cross-tabulation
+cross_table <- reviews %>%
+  tbl_cross(
+    row = business_role,
+    col = star_rating,
+    percent = "row",
+    margin = "row"
+  ) %>%
+  add_p() %>%
+  bold_labels() %>%
+  modify_caption("**Star Rating by Business Group**")
+
+cross_table
+```
+
+The rating distribution differed between Avenue Shabu and the combined competitor group, χ²(4) = 14.95, *p* = .005. For example, 67.3% of Avenue Shabu reviews had five stars, compared with 71.9% of competitor reviews. This result shows an association in this dataset. It does not explain the reasons for the difference.
+
+### 4. Multiple Regression
+
+**Prompt:** Using your MSDM CEP data, run multiple regression. The dependent variable can be continuous or dichotomous. Regress a dependent variable on a set of independent variables. Include the code, table, and interpretation.
+
+The assignment allows a continuous or dichotomous dependent variable. I defined a low rating as one to three stars and a higher rating as four or five stars. I used a logistic regression with two predictors: whether the review was for a competitor and review length, measured per 100 words. This keeps the model simple and uses variables already available in the review file.
+
+```{r}
+#| label: logistic-regression
+reviews_model <- reviews %>%
+  mutate(
+    low_rating = if_else(star_rating <= 3, 1L, 0L),
+    word_count_100 = str_count(review_text, "\\S+") / 100
+  )
+
+low_rating_model <- glm(
+  low_rating ~ business_role + word_count_100,
+  data = reviews_model,
+  family = binomial()
+)
+
+regression_table <- low_rating_model %>%
+  tbl_regression(
+    exponentiate = TRUE,
+    label = list(
+      business_role = "Business group",
+      word_count_100 = "Review length (per 100 words)"
+    )
+  ) %>%
+  bold_labels() %>%
+  modify_caption("**Logistic Regression for Low Star Ratings (1–3 Stars)**")
+
+regression_table
+```
+
+After accounting for review length, competitor reviews had about 2.06 times the odds of receiving a one-to-three-star rating compared with Avenue Shabu reviews (*p* = .009). Each additional 100 words was also associated with higher odds of a low rating (odds ratio = 2.62, *p* < .001). These are associations in the collected Yelp reviews, not evidence that review length or business group caused a rating.
+
+The model is a basic class exercise. Star ratings and review length may not capture the full customer experience, and the competitor group combines five different restaurants. A later review analysis could examine topics such as food, service, or wait time, but that is beyond this first analysis.
+
+## References
+
+- Course lecture. (n.d.). *Summarizing modeling outputs in publishable tables with {gtsummary}* [Lecture]. https://jaejungca.github.io/gtsummary/M08-Customizable%20Tables-gtsummary.html
+- gt. (n.d.). *Introduction to creating gt tables*. https://gt.rstudio.com/articles/intro-creating-gt-tables.html
+- gtExtras. (2026). *Extending 'gt' for beautiful HTML tables*. CRAN. https://CRAN.R-project.org/package=gtExtras
+- Sjoberg, D. D. (2021, April 27). *Presentation-ready summary tables with {gtsummary}* [Presentation]. https://www.danieldsjoberg.com/gtsummary-weill-cornell-presentation/
+
+## Appendix
+
+The analysis uses the Yelp review data collected for the Avenue Shabu CEP project. The review file should be saved in the same folder as this QMD file before rendering.

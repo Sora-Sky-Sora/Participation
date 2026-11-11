@@ -703,5 +703,5 @@ Submit:
 
 # Appendix
 
-- [GitHub Repository](REPLACE-WITH-GITHUB-REPOSITORY-URL)
-- [Published Report on GitHub Pages](REPLACE-WITH-GITHUB-PAGES-URL)
+- [GitHub Repository](https://github.com/Sora-Sky-Sora/Participation/tree/main/IC10-2-1)
+- [Published Report on GitHub Pages](https://sora-sky-sora.github.io/Participation/IC10-2-1/HosodaSora-IC10-2-1-Data%20Preparation%20with%20Case%2031%20assignment.html)

@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-10-29">
+<meta name="author" content="Sora Hosoda">
+<meta name="dcterms.date" content="2026-11-05">
 
-<title>Class Notes for Weeks 10</title>
+<title>Class Notes for Week 11</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -54,17 +55,20 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
-  <li><a href="#market-research-industry-and-career-opportunities" id="toc-market-research-industry-and-career-opportunities" class="nav-link" data-scroll-target="#market-research-industry-and-career-opportunities"><span class="header-section-number">2</span> Market Research Industry and Career Opportunities</a></li>
-  <li><a href="#technology-in-market-research" id="toc-technology-in-market-research" class="nav-link" data-scroll-target="#technology-in-market-research"><span class="header-section-number">3</span> Technology in Market Research</a></li>
-  <li><a href="#synthetic-data" id="toc-synthetic-data" class="nav-link" data-scroll-target="#synthetic-data"><span class="header-section-number">4</span> Synthetic Data</a></li>
-  <li><a href="#ai-moderated-interviews" id="toc-ai-moderated-interviews" class="nav-link" data-scroll-target="#ai-moderated-interviews"><span class="header-section-number">5</span> AI-Moderated Interviews</a></li>
-  <li><a href="#survey-participation-and-incentives" id="toc-survey-participation-and-incentives" class="nav-link" data-scroll-target="#survey-participation-and-incentives"><span class="header-section-number">6</span> Survey Participation and Incentives</a></li>
-  <li><a href="#course-and-assignment-updates" id="toc-course-and-assignment-updates" class="nav-link" data-scroll-target="#course-and-assignment-updates"><span class="header-section-number">7</span> Course and Assignment Updates</a></li>
-  <li><a href="#data-preparation-and-data-wrangling" id="toc-data-preparation-and-data-wrangling" class="nav-link" data-scroll-target="#data-preparation-and-data-wrangling"><span class="header-section-number">8</span> Data Preparation and Data Wrangling</a></li>
-  <li><a href="#reading-and-checking-spss-data-in-r" id="toc-reading-and-checking-spss-data-in-r" class="nav-link" data-scroll-target="#reading-and-checking-spss-data-in-r"><span class="header-section-number">9</span> Reading and Checking SPSS Data in R</a></li>
-  <li><a href="#data-dictionary-and-labels" id="toc-data-dictionary-and-labels" class="nav-link" data-scroll-target="#data-dictionary-and-labels"><span class="header-section-number">10</span> Data Dictionary and Labels</a></li>
-  <li><a href="#bigquery-and-sql" id="toc-bigquery-and-sql" class="nav-link" data-scroll-target="#bigquery-and-sql"><span class="header-section-number">11</span> BigQuery and SQL</a></li>
-  <li><a href="#analytics-objectives-and-analysis-methods" id="toc-analytics-objectives-and-analysis-methods" class="nav-link" data-scroll-target="#analytics-objectives-and-analysis-methods"><span class="header-section-number">12</span> Analytics Objectives and Analysis Methods</a></li>
+  <li><a href="#project-updates" id="toc-project-updates" class="nav-link" data-scroll-target="#project-updates"><span class="header-section-number">2</span> Project Updates</a></li>
+  <li><a href="#data-preparation-and-wrangling" id="toc-data-preparation-and-wrangling" class="nav-link" data-scroll-target="#data-preparation-and-wrangling"><span class="header-section-number">3</span> Data Preparation and Wrangling</a></li>
+  <li><a href="#data-dictionary-and-labels" id="toc-data-dictionary-and-labels" class="nav-link" data-scroll-target="#data-dictionary-and-labels"><span class="header-section-number">4</span> Data Dictionary and Labels</a></li>
+  <li><a href="#reverse-coding-and-multi-item-measures" id="toc-reverse-coding-and-multi-item-measures" class="nav-link" data-scroll-target="#reverse-coding-and-multi-item-measures"><span class="header-section-number">5</span> Reverse Coding and Multi-Item Measures</a></li>
+  <li><a href="#bigquery-and-ga4" id="toc-bigquery-and-ga4" class="nav-link" data-scroll-target="#bigquery-and-ga4"><span class="header-section-number">6</span> BigQuery and GA4</a></li>
+  <li><a href="#data-analysis-planning-table" id="toc-data-analysis-planning-table" class="nav-link" data-scroll-target="#data-analysis-planning-table"><span class="header-section-number">7</span> Data Analysis Planning Table</a></li>
+  <li><a href="#selecting-statistical-methods" id="toc-selecting-statistical-methods" class="nav-link" data-scroll-target="#selecting-statistical-methods"><span class="header-section-number">8</span> Selecting Statistical Methods</a></li>
+  <li><a href="#t-tests-and-anova" id="toc-t-tests-and-anova" class="nav-link" data-scroll-target="#t-tests-and-anova"><span class="header-section-number">9</span> T-Tests and ANOVA</a></li>
+  <li><a href="#cross-tabulation-and-chi-square" id="toc-cross-tabulation-and-chi-square" class="nav-link" data-scroll-target="#cross-tabulation-and-chi-square"><span class="header-section-number">10</span> Cross-Tabulation and Chi-Square</a></li>
+  <li><a href="#regression-and-other-methods" id="toc-regression-and-other-methods" class="nav-link" data-scroll-target="#regression-and-other-methods"><span class="header-section-number">11</span> Regression and Other Methods</a></li>
+  <li><a href="#data-analysis-assignment" id="toc-data-analysis-assignment" class="nav-link" data-scroll-target="#data-analysis-assignment"><span class="header-section-number">12</span> Data Analysis Assignment</a></li>
+  <li><a href="#reporting-results" id="toc-reporting-results" class="nav-link" data-scroll-target="#reporting-results"><span class="header-section-number">13</span> Reporting Results</a></li>
+  <li><a href="#other-week-11-modules" id="toc-other-week-11-modules" class="nav-link" data-scroll-target="#other-week-11-modules"><span class="header-section-number">14</span> Other Week 11 Modules</a></li>
+  <li><a href="#group-project" id="toc-group-project" class="nav-link" data-scroll-target="#group-project"><span class="header-section-number">15</span> Group Project</a></li>
   </ul>
 </nav>
 </div>
@@ -72,18 +76,24 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Class Notes for Weeks 10</h1>
+<h1 class="title">Class Notes for Week 11</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Sora Hosoda </p>
+          </div>
+  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 29, 2026</p>
+      <p class="date">November 5, 2026</p>
     </div>
   </div>
   
@@ -97,197 +107,150 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introduction" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
-<p>Today’s class covered market research careers, new technology in market research, course updates, BigQuery, and data preparation using R. The guest speaker explained how technology is changing the market research industry. The professor also explained the changes to the assignments and the process of preparing data for analysis.</p>
+<p>Today’s class covered project updates, data preparation, analysis planning, statistical methods, BigQuery, and the Week 11 assignments.</p>
 </section>
-<section id="market-research-industry-and-career-opportunities" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Market Research Industry and Career Opportunities</h1>
-<section id="starting-a-career-in-market-research" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="starting-a-career-in-market-research"><span class="header-section-number">2.1</span> Starting a Career in Market Research</h2>
-<p>Many people start their careers at large market research companies. They can learn important skills such as:</p>
+<section id="project-updates" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Project Updates</h1>
+<p>The post-proposal activity should explain:</p>
 <ul>
-<li>Project management</li>
-<li>Survey research</li>
-<li>Data collection</li>
-<li>Data analysis</li>
-<li>Report writing</li>
-<li>Working with clients</li>
+<li>Analytics objectives</li>
+<li>Research methods</li>
+<li>Data availability</li>
+<li>Feasibility of the analysis</li>
+<li>Confirmation from the faculty lead</li>
 </ul>
-<p>After gaining several years of experience, some researchers start their own agencies. Some people create a company because they have a better way to collect data or use new technology. A small research company can still be successful. Some researchers work with several clients and have only a few employees. A small company can be flexible and allow researchers to work on projects that they are interested in. Market research is a skill that can continue to change with technology. If researchers understand data and know how to use their skills, they can continue to find work. They may also create their own job or company.</p>
+<p>Survey data can be planned before collection because researchers control the questions and measurements. Secondary data may take longer because researchers must confirm that the necessary variables are available.</p>
 </section>
-<section id="importance-of-networking" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="importance-of-networking"><span class="header-section-number">2.2</span> Importance of Networking</h2>
-<p>The guest speaker recommended joining the Insights Association. It can help us:</p>
+<section id="data-preparation-and-wrangling" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Data Preparation and Wrangling</h1>
+<p>Data preparation and data wrangling have similar meanings. Wrangling is often used for secondary data because it may require more changes.</p>
+<p>The process may include:</p>
 <ul>
-<li>Meet people in the industry</li>
-<li>Learn about the market research field</li>
-<li>Find internships</li>
-<li>Find mentors</li>
-<li>Learn about job opportunities</li>
+<li>Importing data</li>
+<li>Correcting labels</li>
+<li>Handling missing values</li>
+<li>Reverse coding</li>
+<li>Joining datasets</li>
+<li>Creating new variables</li>
 </ul>
-<p>we should also look for internships and small research projects. Practicing surveys and data analysis can help build experience for a resume. Networking is also important. We should continue meeting people, asking questions, and looking for opportunities.</p>
+<p>After cleaning the data, it should be saved as a new .sav file. This allows researchers to use the cleaned data without repeating the process.</p>
 </section>
-</section>
-<section id="technology-in-market-research" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Technology in Market Research</h1>
-<section id="changes-in-data-collection" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="changes-in-data-collection"><span class="header-section-number">3.1</span> Changes in Data Collection</h2>
-<p>In the past, market research often used:</p>
+<section id="data-dictionary-and-labels" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Data Dictionary and Labels</h1>
+<p>A data dictionary includes:</p>
 <ul>
-<li>Mail surveys</li>
-<li>Telephone surveys</li>
-<li>Online interviews</li>
-<li>Telephone sampling</li>
-</ul>
-<p>Telephone surveys were expensive and it was difficult to reach people. It was also difficult to find people who wanted to answer survey questions. Researchers started using mixed-mode sampling. This can include:</p>
-<ul>
-<li>Telephone interviews</li>
-<li>Online research</li>
-<li>Mobile panels</li>
-<li>Internet surveys</li>
-</ul>
-<p>Using different methods helps researchers find more participants.</p>
-</section>
-<section id="changes-in-the-research-process" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="changes-in-the-research-process"><span class="header-section-number">3.2</span> Changes in the Research Process</h2>
-<p>Several years ago, a research project could take two or three weeks. The process included:</p>
-<ol type="1">
-<li>Writing the survey</li>
-<li>Programming the survey</li>
-<li>Finding a sample provider</li>
-<li>Collecting the data</li>
-<li>Preparing the data</li>
-<li>Conducting data analysis</li>
-<li>Creating the report</li>
-</ol>
-<p>Today, many tools can make this process much faster. A researcher may write a survey in a document and move it into a survey platform automatically. A project can sometimes be programmed and launched on the same day. Data analysis and report writing can also be supported by new tools. However, researchers are still needed. Researchers need to:</p>
-<ul>
-<li>Choose the correct sample</li>
-<li>Write good survey questions</li>
-<li>Check the data</li>
-<li>Understand the results</li>
-<li>Decide whether the results make sense</li>
-</ul>
-<p>Technology can help with the process, but it does not completely replace researchers.</p>
-</section>
-</section>
-<section id="synthetic-data" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Synthetic Data</h1>
-<p>Synthetic data is one of the new topics in market research. It can be used with large datasets to answer questions quickly. For example, a company can create a system using its own data. Employees can ask questions and receive quick information for business decisions. However, synthetic data has important limitations. It may not work well for questions about:</p>
-<ul>
-<li>Price points</li>
-<li>Brand recognition</li>
-<li>Past buying behavior</li>
-<li>Household information</li>
-<li>Number of children</li>
-<li>Personal memories</li>
-<li>Opinions that need real participants</li>
-</ul>
-<p>Synthetic data is not able to answer every type of survey question. It can work for some simple and quick research, but it cannot replace all human data.</p>
-<p>Synthetic data may be useful when:</p>
-<ul>
-<li>The target population is difficult to reach</li>
-<li>Only a small amount of information is needed</li>
-<li>A company has a large amount of existing data</li>
-<li>A company needs a quick answer</li>
-</ul>
-<p>Real people are still important for most large-scale market research projects. Data collection companies may also create new products by collecting large amounts of data for training and analysis. Synthetic data is more likely to be an opportunity than a complete threat to data collection companies. These companies can change their services and provide new types of data products.</p>
-</section>
-<section id="ai-moderated-interviews" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> AI-Moderated Interviews</h1>
-<p>Qualitative research usually includes conversations between a researcher and a participant. For example, a moderator may ask a participant about their college experience or the tools they use. Recruiting participants and conducting interviews can take a lot of time. Recently, some companies have started using AI-moderated interviews.</p>
-<p>In an AI-moderated interview, an AI system can:</p>
-<ul>
-<li>Recruit participants</li>
-<li>Ask questions</li>
-<li>Continue a conversation</li>
-<li>Collect responses</li>
-<li>Complete a short interview</li>
-</ul>
-<p>This method is becoming more common. However, researchers still need to understand qualitative research and check the quality of the answers.</p>
-</section>
-<section id="survey-participation-and-incentives" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Survey Participation and Incentives</h1>
-<p>It can be difficult to get people to participate in surveys. Simply asking people to take a survey may result in a low response rate.</p>
-<p>Researchers should:</p>
-<ul>
-<li>Identify the correct target audience</li>
-<li>Use creative ways to start a conversation</li>
-<li>Explain the purpose of the survey clearly</li>
-<li>Recruit participants in places where the target audience can be found</li>
-</ul>
-<p>Incentives may increase participation, but they can also cause problems. Some participants may only be interested in receiving the incentive or may provide low-quality answers. Incentives can also be expensive and may affect participants’ answers.</p>
-</section>
-<section id="course-and-assignment-updates" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Course and Assignment Updates</h1>
-<p>Some CEP and group assignments will not be graded separately. These assignments were used as steps to prepare the final project. The main focus will be:</p>
-<ul>
-<li>The final presentation</li>
-<li>The final written report</li>
-<li>Chapter 3</li>
-<li>Data collection and verification</li>
-<li>The analysis method</li>
-</ul>
-<p>We should continue working on their projects, but some assignments will be used only as guidelines.</p>
-</section>
-<section id="data-preparation-and-data-wrangling" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Data Preparation and Data Wrangling</h1>
-<p>Data preparation is needed before data analysis. The main steps are:</p>
-<ol type="1">
-<li>Import the data</li>
-<li>Check the variables</li>
-<li>Find missing values</li>
-<li>Check the data quality</li>
-<li>Prepare the data for analysis</li>
-</ol>
-<p>we can start preparing partial data before all data collection is finished. Data preparation can help improve Chapter 3 because it helps explain the sample and the analysis method.</p>
-</section>
-<section id="reading-and-checking-spss-data-in-r" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Reading and Checking SPSS Data in R</h1>
-<p>The class used R to import SPSS data. After importing the data, researchers should check:</p>
-<ul>
-<li>The number of rows and columns</li>
 <li>Variable names</li>
+<li>Variable labels</li>
+<li>Value labels</li>
 <li>Missing values</li>
-<li>Variable labels</li>
-<li>Value labels</li>
-</ul>
-<p>Missing values should be counted for each variable. Variables with missing values should be reviewed before analysis.</p>
-</section>
-<section id="data-dictionary-and-labels" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> Data Dictionary and Labels</h1>
-<p>A data dictionary helps researchers understand the dataset. It can include:</p>
-<ul>
-<li>Variable names</li>
-<li>Variable labels</li>
-<li>Value labels</li>
 <li>Measurement scales</li>
-<li>Missing values</li>
 </ul>
-<p>Variable labels explain what a variable means. Value labels explain the meaning of each number, such as 1 = strongly disagree and 5 = strongly agree.</p>
-<p>Researchers should use the original questionnaire or coding instructions when labels are missing.</p>
+<p>The view_df() function from the sjPlot package can create a data dictionary. Missing or incorrect labels should be corrected using the questionnaire and coding instructions.</p>
+<p>In Case 31, Q8 should be labeled as the loan rate.</p>
 </section>
-<section id="bigquery-and-sql" class="level1" data-number="11">
-<h1 data-number="11"><span class="header-section-number">11</span> BigQuery and SQL</h1>
-<p>BigQuery can be used to store and analyze large datasets, including GA4 data. SQL is used to query the data.</p>
-<p>Some basic SQL functions are:</p>
-<ul>
-<li>SELECT</li>
-<li>FROM</li>
-<li>LIMIT</li>
-<li>ORDER BY</li>
-<li>COUNT</li>
-<li>GROUP BY</li>
-</ul>
+<section id="reverse-coding-and-multi-item-measures" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Reverse Coding and Multi-Item Measures</h1>
+<p>Reverse-coded variables should always be checked after they are created.</p>
+<p>The employee proficiency items had acceptable reliability and could be averaged into an index. The operational effectiveness items did not have sufficient reliability, so they should be analyzed separately.</p>
 </section>
-<section id="analytics-objectives-and-analysis-methods" class="level1" data-number="12">
-<h1 data-number="12"><span class="header-section-number">12</span> Analytics Objectives and Analysis Methods</h1>
-<p>The analysis plan should explain:</p>
+<section id="bigquery-and-ga4" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> BigQuery and GA4</h1>
+<p>BigQuery is part of Google Cloud and can store and analyze large datasets such as GA4 data.</p>
+<p>The basic process includes:</p>
 <ol type="1">
-<li>Which method will be used</li>
-<li>Why the method is appropriate</li>
-<li>Which hypothesis or analytics objective it will address</li>
+<li>Create a Google Cloud project</li>
+<li>Set up billing</li>
+<li>Open BigQuery</li>
+<li>Connect GA4 to BigQuery</li>
+<li>Find the project ID</li>
+<li>Access the data from R</li>
 </ol>
-<p>Each hypothesis should be connected to the correct variables and analysis method.</p>
+<p>R packages can connect to BigQuery through an API, so researchers do not need to download the entire dataset.</p>
+</section>
+<section id="data-analysis-planning-table" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Data Analysis Planning Table</h1>
+<p>For each analytics objective, research question, or hypothesis, the table should identify:</p>
+<ul>
+<li>Constructs and their roles</li>
+<li>Variables</li>
+<li>Operationalization</li>
+<li>Measurement scales</li>
+<li>Descriptive statistics</li>
+<li>Inferential statistics</li>
+</ul>
+<p>The dependent variable is used first to decide which statistical method is appropriate.</p>
+</section>
+<section id="selecting-statistical-methods" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Selecting Statistical Methods</h1>
+<p>Parametric tests are generally used for interval or ratio dependent variables. Nonparametric tests are used for ordinal or nominal dependent variables.</p>
+<p>Likert-type scales are technically ordinal, but researchers often treat them as interval scales to calculate means and use parametric tests.</p>
+</section>
+<section id="t-tests-and-anova" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> T-Tests and ANOVA</h1>
+<p>A one-sample t-test compares one group with a reference value.</p>
+<p>An independent-samples t-test compares the means of two independent groups. In Case 31, it can compare employee proficiency between members living in and outside the headquarters area.</p>
+<p>ANOVA is used when there are more than two groups.</p>
+</section>
+<section id="cross-tabulation-and-chi-square" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Cross-Tabulation and Chi-Square</h1>
+<p>Cross-tabulation is used for categorical variables.</p>
+<p>In Case 31, service awareness has three categories, while member residence has two categories. These variables can be analyzed using a two-by-three cross-tabulation and a chi-square test of independence.</p>
+<p>A p-value below .05 suggests that the variables are associated.</p>
+</section>
+<section id="regression-and-other-methods" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Regression and Other Methods</h1>
+<p>Multiple regression is used when several variables predict one metric dependent variable. Other methods include:</p>
+<ul>
+<li>Logistic regression for a binary dependent variable</li>
+<li>ANCOVA for comparing groups while controlling another variable</li>
+<li>MANOVA for multiple related dependent variables</li>
+<li>Factor analysis for relationships among measurement items</li>
+<li>Cluster analysis for identifying similar groups</li>
+</ul>
+</section>
+<section id="data-analysis-assignment" class="level1" data-number="12">
+<h1 data-number="12"><span class="header-section-number">12</span> Data Analysis Assignment</h1>
+<p>The Week 11 assignment uses Case 31 and the cleaned data from the previous assignment.</p>
+<p>For R1, R2, R5, and R6, we should:</p>
+<ol type="1">
+<li>Review descriptive statistics</li>
+<li>Identify the story in the data</li>
+<li>Conduct the appropriate statistical test</li>
+<li>Explain the insight</li>
+</ol>
+<p>The report should focus on the findings rather than listing the mechanical steps of hypothesis testing. Test statistics and p-values can be placed inside parentheses.</p>
+</section>
+<section id="reporting-results" class="level1" data-number="13">
+<h1 data-number="13"><span class="header-section-number">13</span> Reporting Results</h1>
+<p>Tables and figures should be used to explain the findings clearly. Quarto labels can automatically create numbers:</p>
+<ul>
+<li>Figure labels begin with fig-</li>
+<li>Table labels begin with tbl-</li>
+</ul>
+<p>The echo: false option can hide code when it is not necessary for the audience.</p>
+</section>
+<section id="other-week-11-modules" class="level1" data-number="14">
+<h1 data-number="14"><span class="header-section-number">14</span> Other Week 11 Modules</h1>
+<p>Other modules cover:</p>
+<ul>
+<li>Confirmatory factor analysis</li>
+<li>Measurement models</li>
+<li>Mediators and moderators</li>
+<li>Moving GA4 data into BigQuery</li>
+<li>Querying data with SQL</li>
+<li>Visualizing BigQuery results</li>
+</ul>
+<p>For the BigQuery assignment, we need to take screenshots of the SQL code and output.</p>
+</section>
+<section id="group-project" class="level1" data-number="15">
+<h1 data-number="15"><span class="header-section-number">15</span> Group Project</h1>
+<p>The group should continue collecting data and confirming the analysis plan. Before the final presentation, we should confirm that:</p>
+<ul>
+<li>The required data are available</li>
+<li>The variables match the analytics objectives</li>
+<li>The analysis methods are appropriate</li>
+<li>The faculty lead approves the methodology</li>
+</ul>
 </section>
 
 </main>

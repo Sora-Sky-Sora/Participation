@@ -1,0 +1,188 @@
+---
+title: "Avenue Shabu Online Reputation Analysis"
+subtitle: "Reflection on Labelled Data and Data Cleaning"
+author: "Sora Hosoda"
+institute: "IBM 6500, Cal Poly Pomona"
+date: "`r Sys.Date()`"
+format: 
+  revealjs:
+    theme: serif
+    width: 1600
+    height: 900
+    footer: "Avenue Shabu Online Reputation Analysis"
+    transition: slide
+    transition-speed: default
+    incremental: false
+    toc: true
+    toc-depth: 1
+    slide-number: true
+    scrollable: true
+    smaller: true
+    code-fold: false
+    code-overflow: wrap
+    number-sections: false
+    number-depth: 5
+    embed-resources: true
+    css: styles.css
+editor: visual
+execute: 
+  echo: true
+  freeze: auto
+---
+
+## Labelled Data and My CEP
+
+**What is labelled data? Does your MSDM CEP involve labelled data? Explain why or why not.**
+
+Labelled data include additional information that explains the meaning of variables and their values. For example, a variable may be named `satisfaction`, while its variable label is "Customer Satisfaction." Its values may also have labels, such as 1 for "Very Dissatisfied" and 5 for "Very Satisfied." The `haven` package can keep these labels when SPSS data are imported into R.^[Labels are metadata that help researchers understand the data correctly.]
+
+My CEP uses Google and Yelp reviews of Avenue Shabu, so it does not begin with labelled SPSS data. However, I will create categories for review sentiment, common themes, and management responses. For example, sentiment may be labelled as negative, neutral, or positive.
+
+::: {.notes}
+Explain that Google and Yelp review data are different from an SPSS survey file, but category labels can still be created.
+:::
+
+## Relevant Techniques for My CEP
+
+**What techniques are relevant for your MSDM CEP? Please elaborate on how these approaches might help you address your AO for CEP.**
+
+My analytics objective is to examine Avenue Shabu's ratings, customer comments, common themes, sentiment, and management responses.
+
+The most relevant techniques are:
+
+::: {.incremental}
+
+- Checking missing values and duplicate reviews
+- Making Google and Yelp variables consistent
+- Calculating average ratings and rating distributions
+- Counting positive and negative review themes
+- Comparing Google and Yelp reviews
+- Calculating the management response rate
+- Creating tables and charts
+
+:::
+
+These techniques can help me identify what customers like, which complaints appear often, and whether the review patterns are different between Google and Yelp.
+
+If needed, a t-test could compare average ratings between the two platforms. A chi-square test could also compare sentiment categories. However, these tests would show differences, not the causes of those differences.
+
+## Initial Data Cleaning Process
+
+**In Step 2, you saw the initial data cleaning process. Describe it and what lessons you got from it.**
+
+The study collected survey responses through Qualtrics and participant information through Prolific. Data were collected in two waves. The researcher imported the Prolific CSV files and the Qualtrics SPSS file and then joined the data.
+
+The initial cleaning focused on whether respondents were qualified for the study. Participants needed to be at least 18 years old, have visited a coffee shop, have stayed there for at least 15 minutes, and give consent to participate.
+
+The researcher also checked participant IDs, completion status, survey time, and attention questions. Some people gave different answers in the screening survey and the main survey, so their responses were removed.
+
+## Lessons from Initial Cleaning
+
+Before watching the video, I thought data cleaning mainly meant removing missing values. I learned that it also includes checking whether respondents are eligible and whether their answers are consistent.
+
+The SPSS file was useful because it included variable labels and value labels. The researcher also used frequencies and percentages to find unexpected responses.
+
+::: {.fragment}
+My main lesson was that collected data should not automatically be considered ready for analysis.
+:::
+
+A data dictionary was also helpful because it showed the meaning and order of the variables in a large dataset.
+
+## Further Data Cleaning
+
+**In Step 3, you saw the next phase of data cleaning. Describe it and what the key takeaways are.**
+
+The next phase examined the variables in more detail. The researcher checked frequencies, category numbers, variable labels, and value labels.
+
+Some questions were written in the opposite direction, so they needed to be reverse-coded before calculating an average. Some variables also had unexpected category numbers because questions had been edited in Qualtrics.
+
+After recoding a variable, the researcher compared the original and new values to confirm that the change was correct.
+
+The researcher also reviewed survey duration and answers that did not make sense together. However, one unusual answer was not enough to remove a respondent. Several signs of poor response quality were considered together.
+
+## Key Takeaways from Further Cleaning
+
+:::: {.columns}
+
+::: {.column width="48%"}
+
+### What I Learned
+
+- Check the frequency of important variables.
+- Do not assume that category numbers are correct.
+- Reverse-code questions when necessary.
+- Compare original and recoded variables.
+- Keep notes about every change.
+
+:::
+
+::: {.column width="48%"}
+
+### Why It Matters
+
+Incorrect coding can create misleading averages and results. Researchers need to understand the questionnaire before changing the data.
+
+The original variable should also be available until the new variable has been checked.
+
+:::
+
+::::
+
+::: aside
+Further cleaning should focus especially on the variables connected to the analytics objective.
+:::
+
+## Differences Between the Two Approaches
+
+**What are the big differences between the two approaches?**
+
+| Initial Cleaning | Further Cleaning |
+|---|---|
+| Focused on respondents | Focused on individual variables |
+| Checked eligibility and consent | Checked labels and category values |
+| Checked screening answers | Reverse-coded some questions |
+| Checked IDs and completion status | Corrected unexpected codes |
+| Removed clear low-quality responses | Examined response patterns |
+| Created an initially usable sample | Prepared variables for analysis |
+
+The initial process asked whether a respondent should remain in the dataset. The further process asked whether each important variable was correctly prepared for analysis.
+
+## Impact on Sample Size and Response Quality
+
+**What was the impact on the final sample size and response quality?**
+
+The further-cleaning example started with 800 responses and ended with 736 usable responses. This means that 64 responses, or 8% of the sample, were removed.
+
+:::: {.columns}
+
+::: {.column width="48%"}
+
+### Benefits
+
+- More consistent responses
+- Correct category values
+- Scales in the same direction
+- More meaningful statistics
+- Better confidence in the results
+
+:::
+
+::: {.column width="48%"}
+
+### Caution
+
+Very strict cleaning rules may remove valid responses and reduce the sample size. Researchers should explain why each rule was used and avoid removing someone based on only one small problem.
+
+:::
+
+::::
+
+The purpose of cleaning is not to remove as many responses as possible. The purpose is to keep valid responses and prepare more reliable data for analysis.
+
+## References
+
+- [Transitioning from SPSS to R for Survey Research](https://www.youtube.com/watch?v=CKjH-nWKbFU)
+- [CCIDM Workshop Presentation](https://ccidm.github.io/transitioning-spss-to-r/)
+- *Post-Pandemic Data Initial Cleaning Process*. Cal Poly Pomona Streaming Video.
+- *Post-Pandemic Research Data Further Cleaning*. Cal Poly Pomona Streaming Video.
+- *GP08-Inclass: Data Preparation Execution and Inclass Activity*. Cal Poly Pomona Streaming Video.
