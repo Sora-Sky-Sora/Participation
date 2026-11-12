@@ -170,4 +170,6 @@ The model is a basic class exercise. Star ratings and review length may not capt
 
 ## Appendix
 
-The analysis uses the Yelp review data collected for the Avenue Shabu CEP project. The review file should be saved in the same folder as this QMD file before rendering.
+- The analysis uses the Yelp review data collected for the Avenue Shabu CEP project. The review file should be saved in the same folder as this QMD file before rendering.
+- GitHub Repository: <https://github.com/Sora-Sky-Sora/Participation>
+- GitHub Pages: <https://sora-sky-sora.github.io/Participation/m08/Hosoda%2C%20Sora-M06-gtsummary-Reflection%20Assignment.html>
